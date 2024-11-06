@@ -1,25 +1,27 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useState } from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import PaginaPrincipal from './Pages/PaginaPrincipal/PaginaPrincipal';
 import './App.css';
-
+import Carrito from './Pages/Carrito/Carrito';
+import AñadirProducto from './Pages/AñadirProducto/AñadirProducto';
+import DetalleProducto from './Pages/DetalleProducto/DetalleProducto';
+import Header  from './Pages/PaginaPrincipal/Header';
 function App() {
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router >
+      <div className="App">
+        <Header/>     
+           <Routes>
+        <Route path="/" element={<PaginaPrincipal />} />
+        <Route path="/paginaprincipal" element={<PaginaPrincipal  />} />
+        <Route path='/carrito' element={<Carrito />}></Route>
+          <Route path='/añadirProducto' element={<AñadirProducto />} />
+          <Route path='/detalleProducto/:id' element={<DetalleProducto />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 

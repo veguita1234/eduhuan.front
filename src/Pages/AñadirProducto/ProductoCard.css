@@ -1,0 +1,14 @@
+.add-to-cart-button {
+    background-color: green; /* Color de fondo verde */
+    color: white; /* Color del texto blanco */
+    border: none; /* Sin borde */
+    padding: 10px 20px; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor al pasar el mouse */
+    transition: background-color 0.3s; /* Transición suave para el cambio de color */
+  }
+  
+  .add-to-cart-button:hover {
+    background-color: darkgreen; /* Cambia a un verde más oscuro al pasar el mouse */
+  }
+  
